@@ -22,7 +22,6 @@ import { debounced } from './JS-MODULES/_debounced';
 
 // Style
 import './SCSS/style.scss';
-import 'boxicons/css/boxicons.min.css';
 
 // Start and render application
 async function startApp() {
