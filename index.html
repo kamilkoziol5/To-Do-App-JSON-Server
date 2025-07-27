@@ -20,7 +20,10 @@
 		<div class="all">
 			<div class="task-list-cnt">
 				<form class="task-list-search">
-					<input type="search" id="todoSearch" />
+					<div class="input">
+						<i class="bx bx-search"></i>
+						<input type="search" id="todoSearch" />
+					</div>
 				</form>
 
 				<!-- Container for added and saved Tasks -->
@@ -33,6 +36,71 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- CLASSIC TEMPLATE -->
+		<template id="taskTemplate">
+			<div class="task-inside">
+				<div class="task-header">
+					<h3 class="task-date">{{date}}</h3>
+
+					<div class="task-actions">
+						<button class="task-edit" title="Edytuj zadanie">
+							<i class="bx bx-edit"></i>
+						</button>
+						<button class="task-delete" title="Usuń zadanie">
+							<i class="bx bx-trash"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="task-title">{{title}}</div>
+				</div>
+
+				<div class="row">
+					<div class="task-body">{{body}}</div>
+				</div>
+			</div>
+		</template>
+
+		<!-- EDIT TEMPLATE -->
+		<template id="taskEditTemplate">
+			<div class="task-inside">
+				<div class="task-header">
+					<label>
+						<span>Podaj datę</span>
+						<input type="date" class="task-date" value="{{date}}" />
+					</label>
+
+					<div class="task-actions">
+						<button class="task-delete" title="Usuń zadanie">
+							<i class="bx bx-trash"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<label>
+						<span>Tytuł</span>
+						<input type="text" class="task-title" value="{{title}}" />
+					</label>
+				</div>
+
+				<div class="row">
+					<label>
+						<span>Treść</span>
+						<textarea class="task-body">{{body}}</textarea>
+					</label>
+				</div>
+
+				<div class="task-footer">
+					<button class="button task-edit-save">Zapisz</button>
+					<button class="button task-edit-cancel button-secondary">
+						Anuluj
+					</button>
+				</div>
+			</div>
+		</template>
 
 		<!-- Main JavaScript File -->
 		<script type="module" src="/src/main.js"></script>

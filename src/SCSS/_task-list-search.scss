@@ -7,13 +7,22 @@
 	box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.6) inset;
 	background-color: $accentColor1;
 
+	.input {
+		position: relative;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		left: 1rem;
+		transform: translateY(-50%);
+		font-size: 1.5rem;
+		color: $blackColor;
+	}
+
 	input {
 		border: 1px solid $blackColor;
 		background: $grayColor;
-		background-image: url(../images/icon-search.svg);
-		background-position: 15px center;
-		background-repeat: no-repeat;
-		background-size: 17px;
 		border-radius: 0;
 		padding: 0.7rem 1rem 0.7rem 3rem;
 		font-size: 1.1rem;
