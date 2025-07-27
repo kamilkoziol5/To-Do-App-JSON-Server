@@ -101,7 +101,7 @@
 			top: 0;
 			transform: translate(0, -50%);
 			padding: 0 2px;
-			background: #fff;
+			background: $grayColor;
 		}
 	}
 
@@ -110,9 +110,14 @@
 	textarea.task-body {
 		padding: 0 1rem;
 		height: 3rem;
-		border: 1px solid #aaa;
+		border: 1px solid $strokeColor;
 		font-family: inherit;
-		border-radius: 3px;
+		border-radius: 0;
+		outline: none;
+
+		&:focus {
+			outline: 1px solid $accentColor1;
+		}
 	}
 
 	input.task-title {
@@ -125,4 +130,3 @@
 		height: 10rem;
 	}
 }
-
