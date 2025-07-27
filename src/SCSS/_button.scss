@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+.button {
+	padding: 0.8rem 2rem;
+	background: none;
+	border: 2px solid $blackColor;
+	color: #121212;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 0;
+	transition: 0.4s all;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(0.95);
+		opacity: 0.9;
+	}
+}
+.button-secondary {
+	border-color: #888888;
+	color: #888888;
+}

@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+.task-list-search {
+	grid-area: search;
+	padding: 1rem;
+	border-bottom: 1px solid $blackColor;
+	box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.6) inset;
+	background-color: $accentColor1;
+
+	input {
+		border: 1px solid $blackColor;
+		background: $grayColor;
+		background-image: url(../images/icon-search.svg);
+		background-position: 15px center;
+		background-repeat: no-repeat;
+		background-size: 17px;
+		border-radius: 0;
+		padding: 0.7rem 1rem 0.7rem 3rem;
+		font-size: 1.1rem;
+		font-weight: 500;
+		width: 100%;
+		transition: 200ms ease;
+
+		&:focus {
+			outline: none;
+			outline: 1px solid $blackColor;
+		}
+	}
+}
