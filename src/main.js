@@ -19,6 +19,7 @@ import renderInstruction from './JS-MODULES/_renderInstruction';
 // Utils
 import alertMessage from './JS-MODULES/_alertMessage';
 import { debounced } from './JS-MODULES/_debounced';
+import toast from 'toast-me';
 
 // Style
 import './SCSS/style.scss';
@@ -37,8 +38,12 @@ const form = document.querySelector('.form');
 
 // Search Event with debounce function
 const tHandler = debounced(500, async e => {
-	const tasks = await apiSearchTasks(search.value);
-	renderTaskList(tasks);
+	try {
+		const tasks = await apiSearchTasks(search.value);
+		renderTaskList(tasks);
+	} catch (err) {
+		toast(err, 'error');
+	}
 });
 
 const search = document.querySelector('#todoSearch');
@@ -101,6 +106,7 @@ document.addEventListener('click', async e => {
 			};
 		} catch (err) {
 			console.error('Błąd przy usuwaniu:', err);
+			toast(err, 'error');
 		}
 	}
 
@@ -135,8 +141,13 @@ document.addEventListener('click', async e => {
 			title,
 			body,
 		};
-		const request = await apiEditTask(dataElement);
-		task.innerHTML = getTaskHTML(dataElement, false);
+
+		try {
+			const request = await apiEditTask(dataElement);
+			task.innerHTML = getTaskHTML(dataElement, false);
+		} catch (err) {
+			toast(err, 'error');
+		}
 	}
 
 	// Cancel Edit Task

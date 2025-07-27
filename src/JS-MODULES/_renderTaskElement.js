@@ -1,5 +1,6 @@
 import { apiDeleteTask } from './_api';
 
+
 const ul = document.querySelector('.task-list');
 
 export function getTaskHTML(dataElement, editMode = false) {
