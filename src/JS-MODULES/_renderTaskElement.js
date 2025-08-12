@@ -23,7 +23,7 @@ export function renderSingleTask(dataElement, editMode) {
 
 	element.innerHTML = getTaskHTML(dataElement, editMode);
 
-	ul.prepend(element); // najpierw dodaj do DOM
+	ul.prepend(element);
 
 	const anim = element.animate(
 		[

@@ -1,3 +1,28 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "title": "ZAKUPY",
+      "date": "2025-07-25",
+      "body": "zrobi male zakupy w lidlu",
+      "id": 1
+    },
+    {
+      "title": "dom",
+      "date": "2025-07-25",
+      "body": "dasda\n",
+      "id": 2
+    },
+    {
+      "title": "31231",
+      "date": "2025-07-25",
+      "body": "fsdfsd",
+      "id": 3
+    },
+    {
+      "title": "auto",
+      "date": "2025-07-25",
+      "body": "audi",
+      "id": 4
+    }
+  ]
 }

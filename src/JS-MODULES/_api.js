@@ -1,4 +1,5 @@
 const apiUrl = 'http://localhost:3000/tasks';
+import alertMessage from './_alertMessage';
 
 // Get Tasks from JSON server
 export async function apiGetTasks() {
@@ -8,6 +9,7 @@ export async function apiGetTasks() {
 		const data = await request.json();
 		return data;
 	} else {
+		alertMessage('Error');
 		throw Error(`Coś poszło nie tak. Kod błedu: ${request.status} `);
 	}
 }
@@ -25,6 +27,7 @@ export async function apiAddTask({ title, date, body }) {
 	if (request.ok) {
 		return request.json();
 	} else {
+		alertMessage('Error');
 		throw Error(request.status);
 	}
 }
@@ -37,6 +40,7 @@ export async function apiDeleteTask(id) {
 	if (request.ok) {
 		return request.json();
 	} else {
+		alertMessage('Error');
 		throw Error(request.status);
 	}
 }
@@ -47,6 +51,7 @@ export async function apiSearchTasks(query) {
 	if (request.ok) {
 		return request.json();
 	} else {
+		alertMessage('Error');
 		throw Error(request.status);
 	}
 }
@@ -64,6 +69,7 @@ export async function apiEditTask({ id, title, date, body }) {
 	if (request.ok) {
 		return request.json();
 	} else {
+		alertMessage('Error');
 		throw Error(request.status);
 	}
 }
